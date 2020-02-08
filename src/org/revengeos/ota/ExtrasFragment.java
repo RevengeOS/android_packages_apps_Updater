@@ -1,4 +1,4 @@
-package org.pixelexperience.ota;
+package org.revengeos.ota;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,7 +9,7 @@ import android.preference.PreferenceFragment;
 import android.util.Log;
 import android.widget.ListView;
 
-import org.pixelexperience.ota.model.UpdateInfo;
+import org.revengeos.ota.model.UpdateInfo;
 
 import com.google.android.material.snackbar.Snackbar;
 

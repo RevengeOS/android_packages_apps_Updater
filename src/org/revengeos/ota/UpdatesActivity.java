@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota;
+package org.revengeos.ota;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -49,12 +49,12 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
-import org.pixelexperience.ota.controller.UpdaterController;
-import org.pixelexperience.ota.controller.UpdaterService;
-import org.pixelexperience.ota.download.DownloadClient;
-import org.pixelexperience.ota.misc.Constants;
-import org.pixelexperience.ota.misc.Utils;
-import org.pixelexperience.ota.model.UpdateInfo;
+import org.revengeos.ota.controller.UpdaterController;
+import org.revengeos.ota.controller.UpdaterService;
+import org.revengeos.ota.download.DownloadClient;
+import org.revengeos.ota.misc.Constants;
+import org.revengeos.ota.misc.Utils;
+import org.revengeos.ota.model.UpdateInfo;
 
 import java.io.File;
 import java.io.IOException;
