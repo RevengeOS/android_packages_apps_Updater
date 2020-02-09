@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearancePreferenceCategory"
-            android:textColor="?android:attr/colorAccent"
+            android:textColor="@color/color_accent"
             android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"/>
         <TextView
             android:id="@android:id/summary"

@@ -29,7 +29,7 @@
             android:paddingBottom="12dp"
             android:drawableStart="@drawable/ic_updateui_new"
             android:text="@string/update_found_notification"
-            android:textColor="@color/theme_accent"
+            android:textColor="@color/color_accent"
             android:textSize="18sp" />
 
         <TextView

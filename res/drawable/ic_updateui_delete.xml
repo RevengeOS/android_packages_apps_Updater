@@ -1,8 +1,25 @@
 <!-- drawable/delete.xml -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:height="18dp"
     android:width="18dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <path android:fillColor="@color/theme_accent" android:pathData="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+    <path android:pathData="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="12"
+                android:endY="24"
+                android:startX="1"
+                android:startY="12"
+                android:type="linear">
+                <item
+                    android:color="@color/gradient_primary"
+                    android:offset="0" />
+                <item
+                    android:color="@color/gradient_secondary"
+                    android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
 </vector>
