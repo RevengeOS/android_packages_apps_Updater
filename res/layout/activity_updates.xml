@@ -28,6 +28,10 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
@@ -36,7 +40,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="22dp" />
+            android:layout_height="20dp" />
 
         <TextView
             android:id="@+id/no_new_updates_view"
