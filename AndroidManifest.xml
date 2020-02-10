@@ -18,10 +18,10 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
         android:persistent="true"
         android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".UpdatesActivity"
@@ -45,6 +45,12 @@
             android:name=".LocalChangelogActivity"
             android:excludeFromRecents="true"
             android:label="@string/menu_show_changelog"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Changelog"
+            android:excludeFromRecents="true"
+            android:label="@string/show_changelog"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar" />
 
