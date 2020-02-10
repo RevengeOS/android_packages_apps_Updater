@@ -47,6 +47,10 @@
             android:label="@string/menu_show_changelog"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Changelog"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".controller.UpdaterService" />
         <service android:name=".ExportUpdateService" />

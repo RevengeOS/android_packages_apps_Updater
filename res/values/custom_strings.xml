@@ -62,6 +62,7 @@
     <string name="list_verifying_update">Verifying update</string>
     <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
     <string name="blocked_update_dialog_title">Update blocked</string>
+    <string name="device">Device</string>
 
     <!-- Actions -->
     <string name="action_download">Download</string>

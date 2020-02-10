@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
@@ -38,15 +37,6 @@ import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.revengeos.ota.controller.UpdaterController;
-import org.revengeos.ota.controller.UpdaterService;
-import org.revengeos.ota.misc.Constants;
-import org.revengeos.ota.misc.PermissionsUtils;
-import org.revengeos.ota.misc.StringGenerator;
-import org.revengeos.ota.misc.Utils;
-import org.revengeos.ota.model.UpdateInfo;
-import org.revengeos.ota.model.UpdateStatus;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.view.menu.MenuBuilder;
@@ -55,6 +45,15 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import org.revengeos.ota.controller.UpdaterController;
+import org.revengeos.ota.controller.UpdaterService;
+import org.revengeos.ota.misc.Constants;
+import org.revengeos.ota.misc.PermissionsUtils;
+import org.revengeos.ota.misc.StringGenerator;
+import org.revengeos.ota.misc.Utils;
+import org.revengeos.ota.model.UpdateInfo;
+import org.revengeos.ota.model.UpdateStatus;
 
 import java.io.File;
 import java.io.IOException;
@@ -232,13 +231,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         viewHolder.mBuildName.setText(buildVersion);
         viewHolder.mBuildName.setCompoundDrawables(null, null, null, null);
         viewHolder.mDetails.setOnClickListener(v -> {
-            try {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Utils.getDownloadWebpageUrl(update.getName())));
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mActivity.startActivity(intent);
-            } catch (Exception ex) {
-                mActivity.showSnackbar(R.string.error_open_url, Snackbar.LENGTH_SHORT);
-            }
+            Intent intent = new Intent(v.getContext(), Changelog.class);
+            mActivity.startActivity(intent);
         });
 
         if (activeLayout) {
