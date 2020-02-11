@@ -15,6 +15,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.cardview_cardview \
     androidx.preference_preference \
     androidx.recyclerview_recyclerview \
+    androidx-constraintlayout_constraintlayout \
+    androidx-constraintlayout_constraintlayout-solver \
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res
