@@ -41,6 +41,6 @@ public final class Constants {
     static final String PROP_VERSION_CODE = "ro.build.version.release";
     static final String OTA_URL = "https://raw.githubusercontent.com/RevengeOS-Devices/official_devices/r10.0/%s/device.json";
     static final String DOWNLOAD_WEBPAGE_URL = "https://raw.githubusercontent.com/RevengeOS-Devices/official_devices/r10.0/%s/changelog.txt";
-    public static final String DOWNLOAD_PATH = "/data/system_updates/";
-    static final String EXPORT_PATH = "RevengOS-Updates/";
+    public static final String DOWNLOAD_PATH = "RevengOS-Updates/downloads";
+    static final String EXPORT_PATH = "RevengOS-Updates/zips";
 }

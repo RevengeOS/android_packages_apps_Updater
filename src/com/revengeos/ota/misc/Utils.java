@@ -65,14 +65,20 @@ public class Utils {
     }
 
     public static File getDownloadPath() {
-        return new File(Constants.DOWNLOAD_PATH);
+        File dir = new File(Environment.getExternalStorageDirectory(), Constants.DOWNLOAD_PATH);
+        if (!dir.isDirectory()) {
+            if (dir.exists() || !dir.mkdirs()) {
+                throw new RuntimeException("Could not create directory " + dir);
+            }
+        }
+        return dir;
     }
 
     public static File getExportPath() {
         File dir = new File(Environment.getExternalStorageDirectory(), Constants.EXPORT_PATH);
         if (!dir.isDirectory()) {
             if (dir.exists() || !dir.mkdirs()) {
-                throw new RuntimeException("Could not create directory");
+                throw new RuntimeException("Could not create directory " + dir);
             }
         }
         return dir;
