@@ -16,6 +16,7 @@
  */
 package com.revengeos.ota;
 
+import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -38,6 +39,7 @@ import android.widget.Switch;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -74,6 +76,9 @@ public class UpdatesActivity extends UpdatesListActivity {
     private RotateAnimation mRefreshAnimation;
 
     private ExtrasFragment mExtrasFragment;
+
+    private int STORAGE_PERMISSION_CODE=23;
+    
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
@@ -97,6 +102,8 @@ public class UpdatesActivity extends UpdatesListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updates);
+
+        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         mAdapter = new UpdatesListAdapter(this);
