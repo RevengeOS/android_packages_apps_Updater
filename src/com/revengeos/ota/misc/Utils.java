@@ -122,8 +122,11 @@ public class Utils {
 
     public static boolean canInstall(UpdateBaseInfo update) {
         return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
-                update.getVersion().equalsIgnoreCase(
-                        SystemProperties.get(Constants.PROP_BUILD_VERSION));
+                getMajorVersionInt(update.getVersion()) == getMajorVersionInt(SystemProperties.get(Constants.PROP_BUILD_VERSION));
+    }
+
+    public static int getMajorVersionInt(String version) {
+        return Integer.valueOf(version.split(".", 1)[0]);
     }
 
     public static UpdateInfo parseJson(File file, boolean compatibleOnly)
